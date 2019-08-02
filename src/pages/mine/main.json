@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "我的账户",
+    "disableScroll": true,
+    "usingComponents": {
+        "i-button": "../../static/iview/button/index"
+    }
+}

@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/mine/main",
+    "pages/result/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/main",
+      "iconPath": "./static/tabs/btn_main0.png",
+      "selectedIconPath": "./static/tabs/btn_main1.png",
+      "text": "图片取字"
+    }, {
+      "pagePath": "pages/mine/main",
+      "iconPath": "./static/tabs/btn_wodezhanghu0.png",
+      "selectedIconPath": "./static/tabs/btn_wodezhanghu1.png",
+      "text": "我的账户"
+    }],
+    "selectedColor": "#e2231a"
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "拍照取字",
+    "disableScroll": true,
+    "usingComponents": {
+        "i-icon": "../../static/iview/icon/index"
+    }
+}
