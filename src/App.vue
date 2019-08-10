@@ -1,10 +1,18 @@
 <script>
 
+import store from "@/utils/store";
+
 export default {
   onLaunch() {
   },
 
   created () {
+    wx.cloud.callFunction({
+      name: "getOpenId",
+      complete: res => {
+        store.commit("setOpenId", res.result.openid);
+      }
+    });
   }
 }
 </script>

@@ -41,12 +41,12 @@ export default {
 
   components: {},
 
-  onLoad(data) {},
+  onLoad(data) {
+    this.openId = store.state.openId;
+  },
 
   onShow() {
-    if (this.is_login) {
-      this.updateUserAccount();
-    }
+    this.updateUserAccount();
   },
 
   methods: {

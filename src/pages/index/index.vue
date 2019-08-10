@@ -25,21 +25,6 @@ export default {
 
   methods: {
     longPress(ev) {
-            // 要求用户登录
-      if (!store.state.openId || store.state.openId === "") {
-        wx.showToast({
-          title: "请先登录",
-          icon: "none"
-        });
-        setTimeout(() => {
-          wx.switchTab({
-            url: "/pages/mine/main"
-          });
-        }, 800)
-
-        return;
-      }
-
       const db = wx.cloud.database();
       db.collection("user")
         .where({
@@ -94,21 +79,6 @@ export default {
     },
 
     clickHandle(ev) {
-      // 要求用户登录
-      if (!store.state.openId || store.state.openId === "") {
-        wx.showToast({
-          title: "请先登录",
-          icon: "none"
-        });
-        setTimeout(() => {
-          wx.switchTab({
-            url: "/pages/mine/main"
-          });
-        }, 800)
-
-        return;
-      }
-
       const db = wx.cloud.database();
       db.collection("user")
         .where({
