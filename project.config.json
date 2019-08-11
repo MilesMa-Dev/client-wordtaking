@@ -10,7 +10,7 @@
 	"cloudfunctionRoot": "cloudfunctions/",
 	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
-	"appid": "填写小程序appid",
+	"appid": "wx47bc091d2811b2f3",
 	"projectname": "client-wordtaking",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},

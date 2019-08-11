@@ -15,7 +15,7 @@ const db = cloud.database()
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-  let cred = new Credential("腾讯云SecretId", "腾讯云SecretKey");
+  let cred = new Credential("AKIDlcLvKePUo26yeAbK1ZxBE8wZ2PfkEvxp", "wjT3SgjaGnIdo370sdR5XpBbpriRHyvo");
   let httpProfile = new HttpProfile();
   httpProfile.endpoint = "ocr.tencentcloudapi.com";
   let clientProfile = new ClientProfile();
