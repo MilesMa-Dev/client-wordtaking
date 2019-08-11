@@ -30,7 +30,7 @@ import store from "@/utils/store";
 export default {
   data() {
     return {
-      init_times: 3,
+      init_times: 1,
       times: 0,
       img_head: "/static/images/head_default.png",
       nick: "未登录用户",
@@ -50,6 +50,7 @@ export default {
   },
 
   methods: {
+    // 获取用户微信开放信息
     onUserInfo(e) {
       console.log(e);
       let userInfo = e.mp.detail.userInfo;
@@ -72,11 +73,6 @@ export default {
 
     updateUserAccount() {
       const db = wx.cloud.database();
-      const info = {
-        times: this.init_times,
-        nick: this.nick,
-        avatarUrl: this.img_head
-      };
 
       db
         .collection("user")
@@ -85,19 +81,7 @@ export default {
         })
         .get()
         .then(res => {
-          if (res.data.length === 0) {
-            db
-              .collection("user")
-              .add({
-                data: info
-              })
-              .then(res => {
-                this.updateUserAccount();
-              })
-              .catch(err => {
-                console.log(err);
-              });
-          } else {
+          if (res.data.length !== 0) {
             console.log("data", res);
             store.commit("setUserInfo", res.data[0]);
             this.times = res.data[0].times;

@@ -8,6 +8,7 @@ import util from '@/utils/utils'
 export default new Vuex.Store({
   state: {
     openId: '',
+    is_review: false,
     user_info: {},
   },
 
@@ -15,6 +16,10 @@ export default new Vuex.Store({
   mutations: {
     setOpenId(state, info) {
       state.openId = info;
+    },
+
+    setIsReview(state, info) {
+      state.is_review = info;
     },
 
     setUserInfo(state, info) {

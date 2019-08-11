@@ -36,7 +36,7 @@ export default {
       let str = '\n'
       result = JSON.parse(result);
       result.TextDetections.forEach(e => {
-        str += e.DetectedText + '\n';
+        str += e.DetectedText + '\n\n';
       });
       return str;
     },

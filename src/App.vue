@@ -7,12 +7,7 @@ export default {
   },
 
   created () {
-    wx.cloud.callFunction({
-      name: "getOpenId",
-      complete: res => {
-        store.commit("setOpenId", res.result.openid);
-      }
-    });
+
   }
 }
 </script>
@@ -25,7 +20,7 @@ page {
 .container {
   height: 100%;
 }
-/* this rule will be remove */
+/* this rule will be removed */
 * {
   transition: width 2s;
   -moz-transition: width 2s;
