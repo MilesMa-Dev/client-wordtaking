@@ -8,10 +8,11 @@ exports.main = async (event, context) => {
   return new Promise((resolve, reject) => {
     db.collection('user').update({
       data: {
-        is_logged: false
+        is_logged: false,
+        share_reward: false
       }
     }).then(res => {
-      resolve({ success: true })
+      resolve({ code: 0 })
     })
   })
 }

@@ -1,4 +1,4 @@
-// 云函数入口文件
+// 获取每日奖励
 const cloud = require('wx-server-sdk')
 
 cloud.init()

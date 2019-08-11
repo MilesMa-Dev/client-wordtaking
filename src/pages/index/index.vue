@@ -241,7 +241,12 @@ export default {
                   }
                 });
                 wx.cloud.callFunction({
-                  name: "setLogged",
+                  name: "updateUser",
+                  data: {
+                    info: {
+                      is_logged: true
+                    }
+                  },
                   success: res => {
                     console.log(res);
                     store.commit("setUserInfo", { is_logged: true });

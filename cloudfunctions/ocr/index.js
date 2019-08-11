@@ -1,4 +1,4 @@
-// 云函数入口文件
+// 调用腾讯ocr接口
 const cloud = require('wx-server-sdk')
 const tencentcloud = require("tencentcloud-sdk-nodejs");
 
@@ -15,7 +15,7 @@ const db = cloud.database()
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-  let cred = new Credential("AKIDlcLvKePUo26yeAbK1ZxBE8wZ2PfkEvxp", "wjT3SgjaGnIdo370sdR5XpBbpriRHyvo");
+  let cred = new Credential("appkey", "appsecret");
   let httpProfile = new HttpProfile();
   httpProfile.endpoint = "ocr.tencentcloudapi.com";
   let clientProfile = new ClientProfile();

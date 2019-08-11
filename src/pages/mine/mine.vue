@@ -10,7 +10,7 @@
     </div>
     <div class="times">
       <p class="times-value">{{'可用次数 '+ times +'次'}}</p>
-      <p class="times-tip">{{'（每日赠送'+ init_times +'次）'}}</p>
+      <p class="times-tip">{{'（每日赠送次数x'+ init_times +'）'}}</p>
     </div>
     <i-button
       v-if="!is_login"
@@ -59,11 +59,18 @@ export default {
         this.nick = userInfo.nickName;
         this.is_login = true;
         wx.cloud.callFunction({
-          name: "getOpenId",
-          complete: res => {
-            this.openId = res.result.openid;
-            store.commit("setOpenId", this.openId);
-            this.updateUserAccount();
+          name: "updateUser",
+          data: {
+            info: {
+              avatarUrl: this.img_head,
+              nick: this.nick
+            }
+          },
+          success: res => {
+            console.log(res);
+          },
+          fail: res => {
+            console.log(res);
           }
         });
       } else {

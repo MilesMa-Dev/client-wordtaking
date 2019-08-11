@@ -1,4 +1,4 @@
-// 云函数入口文件
+// 更新用户信息接口
 const cloud = require('wx-server-sdk')
 
 cloud.init()
@@ -14,14 +14,12 @@ exports.main = async (event, context) => {
         _openid: wxContext.OPENID
       })
       .update({
-        data: {
-          is_logged: true
-        }
+        data: event.info
       })
       .then(res => {
-        resolve({ success: true })
+        resolve({ code: 0 })
       }).catch(res => {
-        reject({ fail: true })
+        reject({ code: -1 })
       });
   })
 }

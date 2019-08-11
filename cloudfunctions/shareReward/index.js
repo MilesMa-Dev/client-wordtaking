@@ -1,4 +1,4 @@
-// 云函数入口文件
+// 每日分享奖励
 const cloud = require('wx-server-sdk')
 
 cloud.init()
@@ -17,7 +17,8 @@ exports.main = async (event, context) => {
       })
       .update({
         data: {
-          times: _.inc(4)
+          times: _.inc(4),
+          share_reward: true
         }
       })
       .then(res => {
