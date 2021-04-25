@@ -37,11 +37,6 @@ OCR：[腾讯云文字识别api](https://cloud.tencent.com/document/product/866/
 - [x] 服务器存储可用识别次数
 - [x] 每日恢复可用识别次数
 
-## 项目展示
-- 微信搜索“取字器”
-- 小程序码
-![image](https://github.com/SujeDeveloper/client-wordtaking/blob/master/static/images/qrcode.jpg)
-
 
 
 
